@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*Fonte externa link externo*/
+
+@font-face{ /*Fonte externa baixada*/
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+    --cor0:#c5ebd6; /*variaveis*/
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --fonte-android: 'Android', 'cursive';
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}/*Reset das configurações padrão(o * indica que os comandos digitados vale para dodas as tags)*/
+
+body{
+    background-color: var(--cor0);/*Cor de fundo usando variavel de cor*/
+    font-family: var(--fonte-padrao); /*Fonte que será usada, usando variavel de fonte*/
+}
+a.externo::after{
+    content: '\00A0\1F517';/*\1F517 sinal de link externo -- \00A0 espaço em branco (emoji encontrado em emojipedia.org)*/
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/*degrade no fundo usando as variaveis de cor*/
+    min-height: 150px; /*Altura minima*/
+    text-align: center;/*Alinhamento do texto no centro*/
+    padding-top: 40px;/*Distancia entre a borda e o conteudo*/
+}
+header > p{
+    color: white;/*Cor do texto*/
+    font-family: var(--fonte-padrao);/*Fonte que será usada, usando variavel de fonte*/
+    font-size: 1.2em;/*Tamanho da fonte*/
+    max-width: 600px;/*Largura da caixa*/
+    margin: auto;/*Margem depois da borda em automatico*/
+    padding-bottom: 15px;
+    padding-left: 10px;/*margem entre a borda e conteudo do lado esquerdo*/
+    padding-right: 10px;/*margem entre a borda e conteudo do lado direito*/
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.342);/*Sombras nos textos*/
+}
+
+header > h1{
+    color:white;/*Cor do texto*/
+    font-family: var(--fonte-destaque);/*Fonte que será usada, usando variavel de fonte*/
+    margin-bottom: 20px;/*Margem de baixo depois da borda*/
+    font-size: 3em;/*Tamanho do texto*/
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.514);/*Sombras nos textos*/
+    font-weight: normal;/*Sem negrito*/
+}
+nav{
+    background-color: var(--cor5);/*Cor de fundo usando variavel de cor*/
+    padding: 10px;/*Distancia entre a borda e o conteudo*/
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.377);/*Sombras nos textos*/
+
+}
+nav > a{
+    color:var(--cor1);/*Cor do texto com variaveis de cor*/
+    padding: 10px;/*Distancia entre a borda e o conteudo*/
+    text-decoration: none;/*sem decoração de texto*/
+    font-weight: bold;/*Texto em negrito*/
+    border-radius: 5px;/*cantos da caixa arredondados*/
+    transition-duration: 0.5s;/*Velocidade da transição do hover*/
+}
+nav > a:hover{
+    background-color: var(--cor3);/*Cor do texto usando variavel de cor*/
+    color: var(--cor5);/*Cor do texto usando variavel de cor*/
+    
+}
+main{
+    min-width: 300px;/*Largura minima da caixa*/
+    max-width: 1000px;/*Largura maxima da caixa*/
+    margin: auto;/*Margem depois da borda em automatico*/
+    margin-bottom: 30px;
+    padding: 20px;/*Distancia entre a borda e o conteudo*/
+    background-color: white;/*Cor de fundo da caixa*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);/*Sombras nos textos*/
+    border-bottom-left-radius: 10px;/*Borda de baixo do lado esquerdo arredondada*/
+    border-bottom-right-radius: 10px;/*Borda de baixo do lado direito arredondada*/
+}
+main h1{
+    color: var(--cor5);/*Cor do texto usando variavel de cor*/
+    font-family: var(--fonte-android);/*Fonte que será usada, usando variavel de fonte*/
+    font-size: 1.8em;
+    font-weight: normal;/*Sem negrito*/
+}
+
+main h2{
+    font-family: var(--fonte-android);/*Fonte que será usada, usando variavel de fonte*/
+    color: var(--cor4);/*Cor do texto usando variavel de cor*/
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1),transparent);
+    text-indent: 8px;
+    font-weight: normal;/*Sem negrito*/
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify; 
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;  
+   }
+   main strong{
+       font-weight: bold;
+       padding: 2px 6px;/*margem em cima e em baixo entre a borda e conteudo*/
+   }
+   main a{
+       text-decoration: none;/*sem decoração de texto*/
+       font-weight: bold;/*texto em negrito*/
+       color:var(--cor5) ;/*Cor do texto usando variavel de cor*/
+       background-color: var(--cor1);/*Cor de fundo usando variavel de cor*/
+       padding: 2px 6px;/*margem em cima e em baixo entre a borda e conteudo*/
+   }
+   main a:hover{
+       text-decoration: underline;
+       color: var(--cor4);/*Cor do texto usando variavel de cor*/
+   }
+main img.pequena{
+    max-width: 350px;/*largura maxima da imagem*/
+    display: block;
+    margin: auto;/*Margem depois da borda em automatico*/
+}
+main img{
+    width: 100%;/*largura da imagem*/
+}
+div.video{
+    background-color: var(--cor5); 
+    margin:0px -20px 30px -20px;/*margem de fora da caixa 0 em cima e baixo 30 e -20 na direta e esquerda*/
+    padding: 20px;/*Distancia entre a borda e o conteudo*/
+    padding-bottom: 59%;/*distância da borda para o conteudo (tira as bordas pretas do video)*/
+    position: relative;
+
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;/* quando a posição da caixa esta em absolute top e a margem de cima de fora */
+    left: 5%;/* quando a posição da caixa esta em absolute top e a margem da esquerda de fora */
+    width: 90%;/*Largura da caixa*/
+    height: 90%;/*Altura da caixa*/
+}
+
+aside{
+    background-color: var(--cor1);/*Cor do texto usando variavel de cor*/
+    padding: 10px;/*Distancia entre a borda e o conteudo*/
+    border-radius: 10px;/*bordas da caixa arredondadas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.288);/*Sombras da caixa*/
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';/*\2714 sinal de check na lista -- \00A0 espaço em branco (emoji encontrado em emojipedia.org)*/
+    list-style-position: inside;/*Posição da lista dentro da caixa*/
+    columns: 2;/*Numeros de colunas da lista*/
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;/*Cor do texto*/
+    padding: 10px;/*Distancia entre a borda e o conteudo*/
+    margin:-10px -10px 0px -10px;/*Margem de fora da caixa*/
+    border-radius: 10px 10px 0px 0px;/*Bordas da esquerda e direita de cima arredondada*/
+    
+}
+footer{
+    background-color: var(--cor5);/*Cor de fundo usando variavel de cor*/
+    color: white;/*Cor do texto*/
+    text-align: center;/*Texto alinhado no centro da caixa*/
+    font-size: 0.8em; /*Tamanho da fonte*/
+    padding: 5px;/*Distancia entre a borda e o conteudo*/
+}
+footer >p >a{
+    color: white;/*Cor do texto*/
+    font-weight: bolder;/*texto em negrito*/
+    text-decoration: none;/*sem decoração de texto*/
+}
+footer a:hover{
+    text-decoration: underline;/*decoração de texto com uma linha em baixo*/
+    color:var(--cor1);/*Cor do texto usando variavel de cor*/
+}
