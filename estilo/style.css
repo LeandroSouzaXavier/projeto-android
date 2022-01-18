@@ -43,7 +43,7 @@ header > p{
     font-size: 1.2em;/*Tamanho da fonte*/
     max-width: 600px;/*Largura da caixa*/
     margin: auto;/*Margem depois da borda em automatico*/
-    padding-bottom: 15px;
+    padding-bottom: 50px;
     padding-left: 10px;/*margem entre a borda e conteudo do lado esquerdo*/
     padding-right: 10px;/*margem entre a borda e conteudo do lado direito*/
     text-shadow: 2px 2px rgba(0, 0, 0, 0.342);/*Sombras nos textos*/
